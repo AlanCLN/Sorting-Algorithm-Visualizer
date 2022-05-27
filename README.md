@@ -30,4 +30,4 @@ In Sorting Algorithm Visualizer users will be able to:
 
 ## UI
 
-<img src="https://wireframe.cc/7bSpIh">
+<a href="https://wireframe.cc/7bSpIh"></a>
