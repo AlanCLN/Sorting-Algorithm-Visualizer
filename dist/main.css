@@ -57,7 +57,7 @@ table {
 }
 
 li a {
-  color: black;
+  color: white;
 }
 
 #top-nav {
@@ -90,9 +90,39 @@ li a {
   /* get rid of this when favicons are placed */
 }
 
-#bar-container {
+#main-body {
   display: flex;
+  padding: 50px;
+  justify-content: space-around;
+}
+
+#graph {
+  display: flex;
+  align-items: flex-end;
   width: 1000px;
   height: 400px;
   border: 2px solid lightgray;
+}
+
+#legend {
+  display: flex;
+  height: 30px;
+  width: 1000px;
+  border: 2px solid lightgray;
+  margin-top: 10px;
+}
+
+#control {
+  height: 400px;
+  width: 200px;
+  border: 2px solid lightgray;
+}
+
+.bar {
+  width: 50px;
+  background-color: darkgray;
+  margin: auto 10px 0 10px;
+  flex: 1 1 auto;
+  text-align: center;
+  padding: 4px;
 }

@@ -1,11 +1,13 @@
 class Bar {
     constructor(value, graph) {
+        debugger
         this.value = value;
         this.graph = graph;
-        console.log(value);
         const barDiv = document.createElement("div");
-
-        barDiv.style.height = "80px";
+        this.div = barDiv;
+        barDiv.style.height = `${value * 3}px`;
+        barDiv.innerText = value;
+        barDiv.classList.add("bar");
     }
 }
 
