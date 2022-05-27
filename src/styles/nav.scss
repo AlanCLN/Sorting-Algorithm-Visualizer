@@ -1,0 +1,30 @@
+#top-nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: gray;
+    height: 50px;
+    width: auto;
+    font-family: sans-serif;
+    
+}
+
+#top-nav h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    padding: 4px;
+    margin: 8px;
+}
+
+#socials {
+    padding: 2px;
+    margin: 10px;
+}
+
+#socials li {
+    display: inline-block;
+    font-size: 20px;  /* get rid of this when favicons are placed */
+    color: white;  /* get rid of this when favicons are placed */
+
+
+}
