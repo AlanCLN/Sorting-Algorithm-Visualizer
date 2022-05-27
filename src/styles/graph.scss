@@ -1,6 +1,6 @@
-#bar-container {
+#graph {
     display: flex;
-    width: 1000px;
+    width: $graph-legend-width;
     height: 400px;
     border: 2px solid lightgray;
 }
