@@ -1,4 +1,4 @@
-function bubbleSort(array) {
+function bubbleSort (array) {
     const resultArray = array.slice();
     let sorted = false;
 
