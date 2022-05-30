@@ -5,6 +5,7 @@ export default class Graph {
         this.graph = document.getElementById("graph");
         this.numDivs = numDivs;
         this.generateGraph();
+        this.sorted = false;
     }
 
     generateGraph() {

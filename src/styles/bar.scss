@@ -1,5 +1,5 @@
 .bar {
-    background-color: darkgray;
+    background-color: $unsorted-bar-color;
     margin: 0 2px;
     flex: 1 1 auto;
     text-align: center;
@@ -8,5 +8,9 @@
 }
 
 .checking {
-    background-color: pink;
+    background-color: $checking-bar-color;
+}
+
+.sorted {
+    background-color: $sorted-bar-color;
 }
