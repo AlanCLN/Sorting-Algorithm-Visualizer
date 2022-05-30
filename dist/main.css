@@ -60,6 +60,11 @@ li a {
   color: white;
 }
 
+div {
+  box-sizing: border-box;
+  display: block;
+}
+
 #top-nav {
   display: flex;
   justify-content: space-between;
@@ -99,8 +104,10 @@ li a {
 #graph {
   display: flex;
   align-items: flex-end;
-  width: 1000px;
+  justify-content: space-around;
+  width: 100%;
   height: 400px;
+  margin: auto auto;
   border: 2px solid lightgray;
 }
 
@@ -119,10 +126,14 @@ li a {
 }
 
 .bar {
-  width: 50px;
   background-color: darkgray;
-  margin: auto 10px 0 10px;
+  margin: 0 2px;
   flex: 1 1 auto;
   text-align: center;
   padding: 4px;
+  font-family: sans-serif;
+}
+
+.checking {
+  background-color: pink;
 }

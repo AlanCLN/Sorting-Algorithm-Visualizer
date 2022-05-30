@@ -1,13 +1,18 @@
 class Bar {
     constructor(value, graph) {
-        debugger
         this.value = value;
         this.graph = graph;
+
+        // create div for each bar and set some attributes
         const barDiv = document.createElement("div");
-        this.div = barDiv;
+        const width = (1/graph.numDivs) * 100;
+
         barDiv.style.height = `${value * 3}px`;
-        barDiv.innerText = value;
+        barDiv.style.width = `${width}%`;
+
         barDiv.classList.add("bar");
+
+        this.div = barDiv;
     }
 }
 
