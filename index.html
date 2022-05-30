@@ -26,16 +26,55 @@
 
         <div id="graph-legend-container">
             <div id="graph"></div>
-            <div id="legend"></div>
-        </div>
 
-        <div id="control">
-            <div class="play-btn-container">
-                <div class="play"></div>
+            <div id="legend">
+                <div class="color-label-divs">
+                    <div id="unsorted-color-box" class="color-box"></div>
+                    <div class="color-label">Unsorted</div>
+                </div>
+                <div class="color-label-divs">
+                    <div id="checking-color-box" class="color-box"></div>
+                    <div class="color-label">Checking</div>
+                </div>
+                <div class="color-label-divs">
+                    <div id="sorted-color-box" class="color-box"></div>
+                    <div class="color-label">Sorted</div>
+                </div>
             </div>
         </div>
 
+        <div id="control">
+            <div id="play-restart-container">
+                <div class="play-btn-container">
+                    <div class="play"></div>
+                </div>
+            </div>
+            <div id="size-control">
+                <span class="size-label">Size</span>
+                <div id="10" class="size-button size-selected">10</div>
+                <div id="25" class="size-button">25</div>
+                <div id="50" class="size-button">50</div>
+            </div>
+
+            <div id="speed-control">
+                <span class="speed-label">Speed</span>
+                <div id="1" class="speed-button speed-selected">1x</div>
+                <div id="2" class="speed-button">2x</div>
+                <div id="3" class="speed-button">3x</div>
+            </div>
+            <div id="alg-control">
+                <div id="bubble" class="alg-button alg-selected">Bubble Sort</div>
+                <div id="quick" class="alg-button">Quick Sort</div>
+                <div id="merge" class="alg-button">Merge Sort</div>
+            </div>
+        </div>
     </main>
+
+    <section id="description-performance">
+
+
+
+    </section>
     
 </body>
 </html>

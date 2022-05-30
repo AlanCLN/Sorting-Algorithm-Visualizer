@@ -98,7 +98,6 @@ div {
 #main-body {
   display: flex;
   padding: 50px;
-  justify-content: space-around;
 }
 
 #graph {
@@ -115,51 +114,184 @@ div {
   display: flex;
   height: 30px;
   width: 1000px;
-  border: 2px solid lightgray;
-  margin-top: 10px;
+  margin-top: 20px;
+  justify-content: space-around;
+}
+
+#legend .color-label-divs {
+  width: 100px;
+  display: flex;
+}
+
+.color-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+}
+
+.color-label {
+  padding: 2px;
+  margin-left: 5px;
+}
+
+#unsorted-color-box {
+  background-color: darkgray;
+}
+
+#checking-color-box {
+  background-color: pink;
+}
+
+#sorted-color-box {
+  background-color: lightgreen;
 }
 
 #control {
   height: 400px;
-  width: 200px;
+  width: 250px;
   border: 2px solid lightgray;
-  padding: 10px;
+  padding: 15px;
+  margin-left: 30px;
+  font-size: 18px;
+  border-radius: 3px;
 }
 
 /* Play/Pause button taken from codepen by Samiullah Khan */
+#play-restart-container {
+  margin-top: 10px;
+}
+
 .play-btn-container {
-  width: 50px;
-  height: 50px;
+  width: 38px;
+  height: 38px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
   border: 2px solid lightgray;
-  padding-left: 5px;
+  padding-left: 4px;
   /* change container to circle */
   border-radius: 50%;
 }
 
 .play-btn-container:hover {
   cursor: pointer;
+  background-color: black;
 }
 
 .play {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   box-sizing: border-box;
   border-style: solid;
-  border-width: 12px 0px 12px 24px;
+  border-width: 9px 0px 9px 18px;
   border-color: transparent transparent transparent steelblue;
   transition: all 100ms ease-in-out;
 }
 
 .pause {
   border-style: double;
-  border-width: 0px 0px 0px 18px;
+  border-width: 0px 0px 0px 14px;
 }
 
 /* End Play/Pause button */
+/* Size Control */
+#size-control {
+  display: flex;
+  width: auto;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#size-control > span {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  padding: 4px;
+}
+
+#size-control > div {
+  width: 30px;
+  height: 30px;
+  border: 1px solid lightgray;
+  padding: 4px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.size-button:hover {
+  cursor: pointer;
+}
+
+div.size-selected {
+  background-color: lightgray;
+  font-weight: 550;
+}
+
+/* End Size Control */
+/* Speed Control */
+#speed-control {
+  display: flex;
+  width: auto;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+#speed-control > span {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  padding: 4px;
+}
+
+#speed-control > div {
+  width: 30px;
+  height: 30px;
+  border: 1px solid lightgray;
+  padding: 4px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.speed-button:hover {
+  cursor: pointer;
+}
+
+div.speed-selected {
+  background-color: lightgray;
+  font-weight: 550;
+}
+
+/* End Speed Control */
+/* Algorithm Control */
+#alg-control {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#alg-control div {
+  text-align: center;
+  border: 1px solid lightgray;
+  height: 60px;
+  box-sizing: border-box;
+  margin-left: 20px;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-radius: 3px;
+}
+
+.alg-button:hover {
+  cursor: pointer;
+}
+
+.alg-selected {
+  background: lightgray;
+}
+
+/* End Alg Control */
 .bar {
   background-color: darkgray;
   margin: 0 2px;

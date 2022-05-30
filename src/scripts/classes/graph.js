@@ -24,6 +24,12 @@ export default class Graph {
         }
     }
 
+    removeAllChildNodes() {
+        while (this.graph.firstChild) {
+            this.graph.removeChild(this.graph.firstChild);
+        }
+    }
+    
     check(bar1, bar2) {
         bar1.classList.add("checking");
         bar2.classList.add("checking");
@@ -34,9 +40,4 @@ export default class Graph {
         bar2.classList.remove("checking");
     }
 
-    removeAllChildNodes() {
-        while (this.graph.firstChild) {
-            this.graph.removeChild(this.graph.firstChild);
-        }
-    }
 }

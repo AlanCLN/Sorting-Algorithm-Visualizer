@@ -2,6 +2,41 @@
     display: flex;
     height: 30px;
     width: $graph-legend-width;
-    border: 2px solid lightgray;
-    margin-top: 10px
+    // border: 2px solid lightgray;
+    margin-top: 20px;
+    justify-content: space-around;
 }
+
+#legend .color-label-divs {
+    width: 100px;
+    display: flex;
+}
+
+.color-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+
+}
+
+.color-label {
+    padding: 2px;
+    margin-left: 5px;
+}
+
+
+// legend colors
+
+#unsorted-color-box {
+    background-color: $unsorted-bar-color;
+}
+
+#checking-color-box {
+    background-color: $checking-bar-color;
+}
+
+#sorted-color-box {
+    background-color: $sorted-bar-color;
+}
+
+

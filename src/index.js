@@ -6,7 +6,7 @@ import sleep from "./scripts/utils/sleep";
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const graphObject = new Graph(30);
+    const graphObject = new Graph(15);
 
     const playBtn = document.querySelector('.play');
 
@@ -16,13 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
             e.target.classList.remove("pause");
             // add pause alg here
         } else {
-            // e.target.classList.add("pause");
-            // async function removePauseAfterSorted () {
-            //     await bubbleSort(graphObject, 50);
-            //     e.target.classList.remove("pause");
-            //     return;
-            // }
-            // removePauseAfterSorted();
+            e.target.classList.add("pause");
+            async function removePauseAfterSorted () {
+                await bubbleSort(graphObject, 50);
+                e.target.classList.remove("pause");
+            }
+            removePauseAfterSorted();
             
         }
         

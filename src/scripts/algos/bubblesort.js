@@ -1,11 +1,13 @@
 import sleep from "../utils/sleep";
 
 async function bubbleSort (graphObject, speed) {
-    let sorted = false;
+    // let sorted = false;
     let unsortedDivs = graphObject.numDivs;
 
-    while (!sorted) {
-        sorted = true;
+    // while (!sorted) {
+    while (!graphObject.sorted) {
+        // sorted = true;
+        graphObject.sorted = true;
         for (let i = 0; (i < graphObject.numDivs - 1) && (i < unsortedDivs - 1); i++) { 
             let j = i + 1;
 
@@ -19,7 +21,7 @@ async function bubbleSort (graphObject, speed) {
             let bar2Value = parseInt(graphObject.bars[j].dataset.value);
 
             if (bar1Value > bar2Value) {
-                sorted = false;
+                graphObject.sorted = false;
                 [graphObject.bars[i], graphObject.bars[j]] = [graphObject.bars[j], graphObject.bars[i]]
                 swap(bar1, bar2);
                 await sleep(speed);
