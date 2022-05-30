@@ -1,48 +1,38 @@
 
-async function bubbleSort (graph) {
+async function bubbleSort (graphObject) {
     let sorted = false;
 
     while (!sorted) {
         sorted = true;
-
-        for (let i = 0; i < graph.arr.length - 1; i++) {  // the graph has a this.arr property
+        for (let i = 0; i < graphObject.numDivs - 1; i++) { 
             let j = i + 1;
-            debugger
 
-            let ele1 = graph.arr[i].div; // grabbing the div elements of the bar object
-            let ele2 = graph.arr[j].div; // grabbing another div element of the bar object
+            const bar1 = graphObject.bars[i];
+            const bar2 = graphObject.bars[j];
 
-            ele1.classList.add("checking");
-            ele2.classList.add("checking");
+            graphObject.check(bar1, bar2);
 
-            if (graph.arr[i].value > graph.arr[j].value) {
+            let bar1Value = parseInt(graphObject.bars[i].dataset.value);
+            let bar2Value = parseInt(graphObject.bars[j].dataset.value);
+            
+            if (bar1Value > bar2Value) {
                 sorted = false;
-                debugger
-                [graph.arr[i], graph.arr[j]] = [graph.arr[j], graph.arr[i]];
-                debugger
-                setTimeout(update(ele1, ele2), 5000)
-                debugger
+                [graphObject.bars[i], graphObject.bars[j]] = [graphObject.bars[j], graphObject.bars[i]]
+                await swap(bar1, bar2);
             }
-            ele1.classList.remove("checking");
-            ele2.classList.remove("checking");
+            graphObject.uncheck(bar1, bar2)
         }
     }
     return graph;
 }
 
 
-function update(bar1, bar2) {  // takes in two bar divs and updates the information
-    let tempHeight = bar1.style.height;
-    let tempInnerText = bar1.innerText;
+function swap(bar1, bar2) {  // takes in two bar divs and swaps them
+    const afterBar2 = bar2.nextElementSibling;
+    const parent = bar2.parentNode;
 
-    bar1.style.height = bar2.style.height;
-    bar1.innerText = bar2.innerText;
-
-    bar2.style.height = tempHeight;
-    bar2.innerText = tempInnerText;
-
-    bar2.div = bar1.div;
-
+    bar1.replaceWith(bar2);
+    parent.insertBefore(bar1, afterBar2);
 }
 
 export default bubbleSort;

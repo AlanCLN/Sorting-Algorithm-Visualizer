@@ -23,6 +23,16 @@ export default class Graph {
         }
     }
 
+    check(bar1, bar2) {
+        bar1.classList.add("checking");
+        bar2.classList.add("checking");
+    }
+
+    uncheck(bar1, bar2) {
+        bar1.classList.remove("checking");
+        bar2.classList.remove("checking");
+    }
+
     removeAllChildNodes() {
         while (this.graph.firstChild) {
             this.graph.removeChild(this.graph.firstChild);

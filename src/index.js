@@ -5,8 +5,8 @@ import bubbleSort from "./scripts/algos/bubblesort";
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const g = new Graph(10);
+    const graphObject = new Graph(10);
 
-    // bubbleSort(g)
+    bubbleSort(graphObject)
 
 })

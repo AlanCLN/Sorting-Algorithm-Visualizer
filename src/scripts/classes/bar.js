@@ -9,6 +9,7 @@ class Bar {
 
         barDiv.style.height = `${value * 3}px`;
         barDiv.style.width = `${width}%`;
+        barDiv.setAttribute("data-value", `${value}`)
 
         barDiv.classList.add("bar");
 
