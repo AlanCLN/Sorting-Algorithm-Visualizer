@@ -1,11 +1,14 @@
 #control {
+    display: flex;
+    flex-direction: column;
     height: 400px;
     width: 250px;
-    border: 2px solid lightgray;
+    border: 4px solid $page-border-color;
     padding: 15px;
     margin-left: 30px;
     font-size: 18px;
     border-radius: 3px;
+    box-shadow: $box-shadow;
 }
 
 /* Play/Pause button taken from codepen by Samiullah Khan */
@@ -21,7 +24,7 @@
     justify-content: center;
     align-items: center;;
     margin: 0 auto;
-    border: 2px solid lightgray;
+    border: 2px solid $page-border-color;
     padding-left: 4px;
 
     /* change container to circle */
@@ -30,7 +33,7 @@
 
 .play-btn-container:hover {
     cursor: pointer;
-    background-color: black;
+    background-color: $selected-color;
 }
 
 
@@ -40,7 +43,7 @@
   box-sizing: border-box;
   border-style: solid;
   border-width: 9px 0px 9px 18px;
-  border-color: transparent transparent transparent steelblue;
+  border-color: transparent transparent transparent $page-color;
   transition: all 100ms ease-in-out;
 }
 
@@ -69,13 +72,14 @@
   padding: 4px;
 }
 
-#size-control > div {
+#size-control .size-button {
   width: 30px;
   height: 30px;
   border: 1px solid lightgray;
   padding: 4px;
   text-align: center;
   border-radius: 3px;
+  margin-right: 2px;
 }
 
 .size-button:hover {
@@ -83,7 +87,7 @@
 }
 
 div.size-selected {
-  background-color: lightgray;
+  background-color: $selected-color;
   font-weight: 550;
 }
 
@@ -98,22 +102,23 @@ div.size-selected {
   width: auto;
   justify-content: center;
   margin-top: 5px;
+  margin-right: 15px;
 }
 
 #speed-control > span {
-  width: 30px;
   height: 30px;
-  margin-right: 15px;
+  margin-right: 7px;
   padding: 4px;
 }
 
-#speed-control > div {
+#speed-control .speed-button {
   width: 30px;
   height: 30px;
-  border: 1px solid lightgray;
+  border: 1px solid $selected-color;
   padding: 4px;
   text-align: center;
   border-radius: 3px;
+  margin-right: 2px;
 }
 
 .speed-button:hover {
@@ -121,7 +126,7 @@ div.size-selected {
 }
 
 div.speed-selected {
-  background-color: lightgray;
+  background-color: $selected-color;
   font-weight: 550;
 }
 
@@ -145,35 +150,19 @@ div.speed-selected {
   border: 1px solid lightgray;
   height: 60px;
   box-sizing: border-box;
-  margin-left: 20px;
-  margin-top: 20px;
-  padding-top: 10px;
   border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
 
 .alg-button:hover {
   cursor: pointer;
+  box-shadow: $selected-box-shadow;
 }
 
 .alg-selected {
-  background: lightgray;
+  background: $selected-color;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* End Alg Control */

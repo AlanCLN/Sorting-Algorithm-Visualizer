@@ -1,10 +1,12 @@
 #legend {
     display: flex;
-    height: 30px;
+    height: 35px;
     width: $graph-legend-width;
-    // border: 2px solid lightgray;
+    border: 1px solid $page-color;
     margin-top: 20px;
     justify-content: space-around;
+    align-items: center;
+    box-shadow: $box-shadow;
 }
 
 #legend .color-label-divs {

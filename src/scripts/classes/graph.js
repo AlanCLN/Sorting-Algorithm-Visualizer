@@ -9,10 +9,8 @@ export default class Graph {
     }
 
     generateGraph() {
-        this.bars = [];
-        this.removeAllChildNodes();
+        this.reset();
         for (let i = 0; i < this.numDivs; i++) {
-
             const value = (Math.floor(Math.random() * 100)) + 10;
 
             const barObject = new Bar(value, this.graph);
@@ -29,7 +27,13 @@ export default class Graph {
             this.graph.removeChild(this.graph.firstChild);
         }
     }
-    
+
+    reset() {
+        this.sorted = false;
+        this.removeAllChildNodes();
+        this.bars = [];
+    }
+
     check(bar1, bar2) {
         bar1.classList.add("checking");
         bar2.classList.add("checking");

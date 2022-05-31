@@ -25,6 +25,7 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
   text-decoration: none;
+  font-family: sans-serif;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -57,7 +58,7 @@ table {
 }
 
 li a {
-  color: white;
+  color: black;
 }
 
 div {
@@ -68,36 +69,58 @@ div {
 #top-nav {
   display: flex;
   justify-content: space-between;
-  background-color: gray;
+  position: fixed;
+  z-index: 10;
+  background-color: #9A86A4;
   height: 50px;
-  width: auto;
+  width: 100%;
   font-family: sans-serif;
+  box-shadow: 5px 5px 9px 2px #767676;
 }
 
 #top-nav h1 {
   font-size: 20px;
   font-weight: 700;
+  text-shadow: 1px 1px 2px black;
   color: white;
   padding: 4px;
   margin: 8px;
+  margin-left: 65px;
 }
 
 #socials {
+  display: flex;
   padding: 2px;
-  margin: 10px;
+  margin-right: 80px;
 }
 
 #socials li {
   display: inline-block;
   font-size: 20px;
   /* get rid of this when favicons are placed */
-  color: white;
+  color: black;
   /* get rid of this when favicons are placed */
+}
+
+.github-favicon {
+  height: 37px;
+  width: auto;
+  margin-top: 4px;
+}
+
+.linkedin-favicon {
+  height: 45px;
+  width: auto;
+  margin-bottom: 4px;
+  margin-left: 4px;
 }
 
 #main-body {
   display: flex;
-  padding: 50px;
+  position: relative;
+  padding: 100px;
+  height: 1200px;
+  justify-content: space-around;
 }
 
 #graph {
@@ -107,15 +130,20 @@ div {
   width: 100%;
   height: 400px;
   margin: auto auto;
-  border: 2px solid lightgray;
+  border: 3px solid #9A86A4;
+  border-radius: 4px;
+  box-shadow: 5px 5px 9px 2px #767676;
 }
 
 #legend {
   display: flex;
-  height: 30px;
+  height: 35px;
   width: 1000px;
+  border: 1px solid #9A86A4;
   margin-top: 20px;
   justify-content: space-around;
+  align-items: center;
+  box-shadow: 5px 5px 9px 2px #767676;
 }
 
 #legend .color-label-divs {
@@ -135,25 +163,28 @@ div {
 }
 
 #unsorted-color-box {
-  background-color: darkgray;
+  background-color: #B1BCE6;
 }
 
 #checking-color-box {
-  background-color: pink;
+  background-color: #F1F0C0;
 }
 
 #sorted-color-box {
-  background-color: lightgreen;
+  background-color: #B7E5DD;
 }
 
 #control {
+  display: flex;
+  flex-direction: column;
   height: 400px;
   width: 250px;
-  border: 2px solid lightgray;
+  border: 4px solid #9A86A4;
   padding: 15px;
   margin-left: 30px;
   font-size: 18px;
   border-radius: 3px;
+  box-shadow: 5px 5px 9px 2px #767676;
 }
 
 /* Play/Pause button taken from codepen by Samiullah Khan */
@@ -168,7 +199,7 @@ div {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  border: 2px solid lightgray;
+  border: 2px solid #9A86A4;
   padding-left: 4px;
   /* change container to circle */
   border-radius: 50%;
@@ -176,7 +207,7 @@ div {
 
 .play-btn-container:hover {
   cursor: pointer;
-  background-color: black;
+  background-color: #dee1ef;
 }
 
 .play {
@@ -185,7 +216,7 @@ div {
   box-sizing: border-box;
   border-style: solid;
   border-width: 9px 0px 9px 18px;
-  border-color: transparent transparent transparent steelblue;
+  border-color: transparent transparent transparent #9A86A4;
   transition: all 100ms ease-in-out;
 }
 
@@ -210,13 +241,14 @@ div {
   padding: 4px;
 }
 
-#size-control > div {
+#size-control .size-button {
   width: 30px;
   height: 30px;
   border: 1px solid lightgray;
   padding: 4px;
   text-align: center;
   border-radius: 3px;
+  margin-right: 2px;
 }
 
 .size-button:hover {
@@ -224,7 +256,7 @@ div {
 }
 
 div.size-selected {
-  background-color: lightgray;
+  background-color: #dee1ef;
   font-weight: 550;
 }
 
@@ -235,22 +267,23 @@ div.size-selected {
   width: auto;
   justify-content: center;
   margin-top: 5px;
+  margin-right: 15px;
 }
 
 #speed-control > span {
-  width: 30px;
   height: 30px;
-  margin-right: 15px;
+  margin-right: 7px;
   padding: 4px;
 }
 
-#speed-control > div {
+#speed-control .speed-button {
   width: 30px;
   height: 30px;
-  border: 1px solid lightgray;
+  border: 1px solid #dee1ef;
   padding: 4px;
   text-align: center;
   border-radius: 3px;
+  margin-right: 2px;
 }
 
 .speed-button:hover {
@@ -258,7 +291,7 @@ div.size-selected {
 }
 
 div.speed-selected {
-  background-color: lightgray;
+  background-color: #dee1ef;
   font-weight: 550;
 }
 
@@ -277,23 +310,24 @@ div.speed-selected {
   border: 1px solid lightgray;
   height: 60px;
   box-sizing: border-box;
-  margin-left: 20px;
-  margin-top: 20px;
-  padding-top: 10px;
   border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .alg-button:hover {
   cursor: pointer;
+  box-shadow: 5px 3px 6px #888888;
 }
 
 .alg-selected {
-  background: lightgray;
+  background: #dee1ef;
 }
 
 /* End Alg Control */
 .bar {
-  background-color: darkgray;
+  background-color: #B1BCE6;
   margin: 0 2px;
   flex: 1 1 auto;
   text-align: center;
@@ -302,9 +336,9 @@ div.speed-selected {
 }
 
 .checking {
-  background-color: pink;
+  background-color: #F1F0C0;
 }
 
 .sorted {
-  background-color: lightgreen;
+  background-color: #B7E5DD;
 }

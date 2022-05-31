@@ -1,4 +1,7 @@
 #main-body {
     display: flex;
-    padding: 50px;
+    position: relative;
+    padding: 100px;
+    height: 1200px;
+    justify-content: space-around;
 }
