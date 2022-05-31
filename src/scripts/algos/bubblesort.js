@@ -22,12 +22,12 @@ async function bubbleSort (graphObject, speed) {
 
             if (bar1Value > bar2Value) {
                 graphObject.sorted = false;
-                [graphObject.bars[i], graphObject.bars[j]] = [graphObject.bars[j], graphObject.bars[i]]
                 swap(bar1, bar2);
+                [graphObject.bars[i], graphObject.bars[j]] = [graphObject.bars[j], graphObject.bars[i]]
                 await sleep(speed);
-
             }
             graphObject.uncheck(bar1, bar2)
+
             if (j === unsortedDivs - 1) {
                 graphObject.bars[j].classList.add("sorted");
                 unsortedDivs--;

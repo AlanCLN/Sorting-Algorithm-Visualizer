@@ -1,34 +1,44 @@
 import sleep from "../utils/sleep";
 
-function quickSort (graphObject, low, high) {
+async function quickSort (graphObject, low, high) {
+
     if (low < high) {
-        let p = partition(graphObject, low, high);
-        quickSort(graphObject.bars, low, (p - 1));
-        quickSort(graphObject.bars, (p + 1), high);
+        const p = await partition(graphObject, low, high);
+        await quickSort(graphObject, low, (p - 1));
+        await quickSort(graphObject, (p + 1), high);
     }
+    debugger
 }
 
-function partition (graphObject, low, high) {
-    let i = low;
+async function partition (graphObject, low, high) {
+    let i = low - 1;
     let pivotDiv = graphObject.bars[high];
     let pivotValue = parseInt(pivotDiv.dataset.value);
 
 
     for (let j = low; j < high; j++) {
-        // graphObject.check(graphObject.bars[j], )
 
         let jBarValue = parseInt(graphObject.bars[j].dataset.value);
+        let jBar = graphObject.bars[j];
 
-        if (jBarValue <= pivotValue) {
-            [graphObject.bars[i], graphObject.bars[j]] = [graphObject.bars[j], graphObject.bars[i]];
-            swap(graphObject.bars[i], graphObject.bars[j]);
+        graphObject.check(jBar, pivotDiv);
+        debugger
+
+        if (jBarValue < pivotValue) {
             i++;
+            await sleep(100);
+            swap(graphObject.bars[i], graphObject.bars[j]);
+            [graphObject.bars[i], graphObject.bars[j]] = [graphObject.bars[j], graphObject.bars[i]];
         }
+        graphObject.uncheck(jBar, pivotDiv);
     }
-    debugger
-    [graphObject.bars[i], graphObject.bars[high]] = [graphObject.bars[high], graphObject.bars[i]];
-    swap(graphObject.bars[i], pivotDiv)
-    return i;
+    await sleep(100);
+    swap(graphObject.bars[i + 1], graphObject.bars[high]);
+    [graphObject.bars[i + 1], graphObject.bars[high]] = [graphObject.bars[high], graphObject.bars[i + 1]];
+
+    
+
+    return (i + 1);
 }
 
 function swap(bar1, bar2) {  // takes in two bar divs and swaps them
