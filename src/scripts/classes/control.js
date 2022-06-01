@@ -11,13 +11,14 @@ export default class Control {
 
     async handlePlayBtn(e) {
         // debugger
+        const playBtn = document.querySelector(".play");
         if (e.target.classList.contains("stop")) {
             e.target.classList.remove("stop");
             this.graphObject.stop = true;
         } else if (this.graphObject.sorted === false) {
             e.target.classList.add("stop");
             // await bubbleSort(this.graphObject, 50)
-            await quickSort(this.graphObject, 0, this.graphObject.numDivs - 1, 33);
+            await quickSort(this.graphObject, 0, this.graphObject.numDivs - 1, 50);
             e.target.classList.remove("stop");
         }
     }

@@ -10,7 +10,7 @@ import mergeSort from "./scripts/algos/mergesort";
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const playBtn = document.querySelector('.play');
+    const playBtnContainer = document.querySelector('.play-btn-container');
     const graphObject = new Graph(25);
     const control = new Control(graphObject);
 
@@ -20,23 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     descriptionContainer.append(bubbleSortP);
 
-    mergeSort(graphObject, 0, graphObject.numDivs)
+    mergeSort(graphObject, 0, graphObject.numDivs - 1);
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-    playBtn.addEventListener('click', e => control.handlePlayBtn(e))
+    playBtnContainer.addEventListener('click', e => control.handlePlayBtn(e))
 })

@@ -1,3 +1,365 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;text-decoration:none;font-family:sans-serif}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:"";content:none}table{border-collapse:collapse;border-spacing:0}li a{color:#000}div{box-sizing:border-box;display:block}#top-nav{display:flex;justify-content:space-between;background-color:#9a86a4;height:50px;width:100%;font-family:sans-serif;box-shadow:5px 5px 9px 2px #767676}#top-nav h1{font-size:20px;font-weight:700;text-shadow:1px 1px 2px #000;color:#fff;padding:4px;margin:8px;margin-left:65px}#socials{display:flex;padding:2px;margin-right:80px}#socials li{display:inline-block;font-size:20px;color:#000}.github-favicon{height:37px;width:auto;margin-top:4px}.linkedin-favicon{height:45px;width:auto;margin-bottom:4px;margin-left:4px}#main-body{display:flex;position:relative;padding:60px;height:100%;justify-content:center}#graph{display:flex;align-items:flex-end;justify-content:space-around;width:100%;height:400px;margin:auto auto;border:3px solid #9a86a4;border-radius:4px;box-shadow:5px 5px 9px 2px #767676}#legend{display:flex;height:35px;width:1000px;border:1px solid #9a86a4;margin-top:20px;justify-content:space-around;align-items:center;box-shadow:5px 5px 9px 2px #767676}#legend .color-label-divs{width:100px;display:flex}.color-box{width:20px;height:20px;border-radius:3px}.color-label{padding:2px;margin-left:5px}#unsorted-color-box{background-color:#b1bce6}#checking-color-box{background-color:#f1f0c0}#swapping-color-box{background-color:pink}#sorted-color-box{background-color:#b7e5dd}#control{display:flex;flex-direction:column;height:400px;width:250px;border:4px solid #9a86a4;padding:15px;margin-left:30px;font-size:18px;border-radius:3px;box-shadow:5px 5px 9px 2px #767676}#play-restart-container{margin-top:10px}.play-btn-container{width:38px;height:38px;display:flex;justify-content:center;align-items:center;margin:0 auto;border:2px solid #9a86a4;padding-left:4px;border-radius:50%}.play-btn-container:hover{cursor:pointer;background-color:#dee1ef}.play{width:18px;height:18px;box-sizing:border-box;border-style:solid;border-width:9px 0px 9px 18px;border-color:rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0) #9a86a4;transition:all 100ms ease-in-out}.stop{background-color:#9a86a4;margin-right:4px}#size-control{display:flex;width:auto;justify-content:center;margin-top:20px}#size-control>span{width:30px;height:30px;margin-right:15px;padding:4px}#size-control .size-button{width:30px;height:30px;border:1px solid #d3d3d3;padding:4px;text-align:center;border-radius:3px;margin-right:2px}.size-button:hover{cursor:pointer}div.size-selected{background-color:#dee1ef;font-weight:550}#speed-control{display:flex;width:auto;justify-content:center;margin-top:5px;margin-right:15px}#speed-control>span{height:30px;margin-right:7px;padding:4px}#speed-control .speed-button{width:30px;height:30px;border:1px solid #dee1ef;padding:4px;text-align:center;border-radius:3px;margin-right:2px}.speed-button:hover{cursor:pointer}div.speed-selected{background-color:#dee1ef;font-weight:550}#alg-control{width:200px;height:200px;display:flex;flex-direction:column;justify-content:space-around}#alg-control div{text-align:center;border:1px solid #d3d3d3;height:60px;box-sizing:border-box;border-radius:3px;display:flex;align-items:center;justify-content:center}.alg-button:hover{cursor:pointer;box-shadow:5px 3px 6px #888}.alg-selected{background:#dee1ef}.bar{background-color:#b1bce6;margin:0 2px;flex:1 1 auto;text-align:center;padding:4px;font-family:sans-serif}.checking{background-color:#f1f0c0}div.swapping{background-color:pink}.sorted{background-color:#b7e5dd}#description-container{height:auto;width:1000px;margin-top:30px;border:2px solid #9a86a4;padding:30px;border:3px solid #9a86a4;border-radius:4px;letter-spacing:1px;line-height:1.5;box-shadow:5px 5px 9px 2px #767676;display:flex;justify-content:center}
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  font-family: sans-serif;
+}
 
-/*# sourceMappingURL=main.css.map*/
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+li a {
+  color: black;
+}
+
+div {
+  box-sizing: border-box;
+  display: block;
+}
+
+#top-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #9A86A4;
+  height: 50px;
+  width: 100%;
+  font-family: sans-serif;
+  box-shadow: 5px 5px 9px 2px #767676;
+}
+
+#top-nav h1 {
+  font-size: 20px;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px black;
+  color: white;
+  padding: 4px;
+  margin: 8px;
+  margin-left: 65px;
+}
+
+#socials {
+  display: flex;
+  padding: 2px;
+  margin-right: 80px;
+}
+
+#socials li {
+  display: inline-block;
+  font-size: 20px;
+  /* get rid of this when favicons are placed */
+  color: black;
+  /* get rid of this when favicons are placed */
+}
+
+.github-favicon {
+  height: 37px;
+  width: auto;
+  margin-top: 4px;
+}
+
+.linkedin-favicon {
+  height: 45px;
+  width: auto;
+  margin-bottom: 4px;
+  margin-left: 4px;
+}
+
+#main-body {
+  display: flex;
+  position: relative;
+  padding: 60px;
+  height: 100%;
+  justify-content: center;
+}
+
+#graph {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  width: 100%;
+  height: 400px;
+  margin: auto auto;
+  border: 3px solid #9A86A4;
+  border-radius: 4px;
+  box-shadow: 5px 5px 9px 2px #767676;
+}
+
+#legend {
+  display: flex;
+  height: 35px;
+  width: 1000px;
+  border: 1px solid #9A86A4;
+  margin-top: 20px;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 5px 5px 9px 2px #767676;
+}
+
+#legend .color-label-divs {
+  width: 100px;
+  display: flex;
+}
+
+.color-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+}
+
+.color-label {
+  padding: 2px;
+  margin-left: 5px;
+}
+
+#unsorted-color-box {
+  background-color: #B1BCE6;
+}
+
+#checking-color-box {
+  background-color: #F1F0C0;
+}
+
+#swapping-color-box {
+  background-color: pink;
+}
+
+#sorted-color-box {
+  background-color: #B7E5DD;
+}
+
+#control {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 250px;
+  border: 4px solid #9A86A4;
+  padding: 15px;
+  margin-left: 30px;
+  font-size: 18px;
+  border-radius: 3px;
+  box-shadow: 5px 5px 9px 2px #767676;
+}
+
+/* Play/Pause button taken from codepen by Samiullah Khan */
+#play-restart-container {
+  margin-top: 10px;
+}
+
+.play-btn-container {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border: 2px solid #9A86A4;
+  padding-left: 4px;
+  /* change container to circle */
+  border-radius: 50%;
+}
+
+.play-btn-container:hover {
+  cursor: pointer;
+  background-color: #dee1ef;
+}
+
+.play {
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 9px 0px 9px 18px;
+  border-color: transparent transparent transparent #9A86A4;
+  transition: all 100ms ease-in-out;
+}
+
+.stop {
+  background-color: #9A86A4;
+  margin-right: 4px;
+}
+
+/* End Play/Pause button */
+/* Size Control */
+#size-control {
+  display: flex;
+  width: auto;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#size-control > span {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  padding: 4px;
+}
+
+#size-control .size-button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid lightgray;
+  padding: 4px;
+  text-align: center;
+  border-radius: 3px;
+  margin-right: 2px;
+}
+
+.size-button:hover {
+  cursor: pointer;
+}
+
+div.size-selected {
+  background-color: #dee1ef;
+  font-weight: 550;
+}
+
+/* End Size Control */
+/* Speed Control */
+#speed-control {
+  display: flex;
+  width: auto;
+  justify-content: center;
+  margin-top: 5px;
+  margin-right: 15px;
+}
+
+#speed-control > span {
+  height: 30px;
+  margin-right: 7px;
+  padding: 4px;
+}
+
+#speed-control .speed-button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #dee1ef;
+  padding: 4px;
+  text-align: center;
+  border-radius: 3px;
+  margin-right: 2px;
+}
+
+.speed-button:hover {
+  cursor: pointer;
+}
+
+div.speed-selected {
+  background-color: #dee1ef;
+  font-weight: 550;
+}
+
+/* End Speed Control */
+/* Algorithm Control */
+#alg-control {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#alg-control div {
+  text-align: center;
+  border: 1px solid lightgray;
+  height: 60px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alg-button:hover {
+  cursor: pointer;
+  box-shadow: 5px 3px 6px #888888;
+}
+
+.alg-selected {
+  background: #dee1ef;
+}
+
+/* End Alg Control */
+.bar {
+  background-color: #B1BCE6;
+  margin: 0 2px;
+  flex: 1 1 auto;
+  text-align: center;
+  padding: 4px;
+  font-family: sans-serif;
+}
+
+.checking {
+  background-color: #F1F0C0;
+}
+
+div.swapping {
+  background-color: pink;
+}
+
+.sorted {
+  background-color: #B7E5DD;
+}
+
+#description-container {
+  height: auto;
+  width: 1000px;
+  margin-top: 30px;
+  border: 2px solid #9A86A4;
+  padding: 30px;
+  border: 3px solid #9A86A4;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  box-shadow: 5px 5px 9px 2px #767676;
+  display: flex;
+  justify-content: center;
+}

@@ -7,6 +7,7 @@ export default class Graph {
         this.numDivs = numDivs;
         this.generateGraph();
         this.sorted = false;
+        this.mergeSortCounter = 0;
         
         // speed will be passed in as either 1, 2, or 3. 100 is the ms delay set at
         // each iteration of an algorithm. The less ms, the less delay, the faster the alg. 
@@ -79,6 +80,16 @@ export default class Graph {
 
         bar1.classList.remove("swapping");
         bar2.classList.remove("swapping");
+    }
+
+    numSortedDivs() {
+        let count = 0;
+        this.bars.forEach(bar => {
+            if (bar.classList.contains("sorted")) {
+                count += 1;
+            }
+        })
+        return count;
     }
 
 

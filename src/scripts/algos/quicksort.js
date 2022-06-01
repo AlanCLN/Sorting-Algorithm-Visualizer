@@ -31,7 +31,7 @@ export default async function quickSort (graphObject, low, high, speed) {
         })
     };
 
-    if (numSortedDivs(graphObject) === graphObject.numDivs) graphObject.sorted = true;
+    if (graphObject.numSortedDivs() === graphObject.numDivs) graphObject.sorted = true;
     // numSortedDivs is a helper function created below
 
 }
@@ -72,14 +72,4 @@ async function partition (graphObject, low, high, speed) {
     [graphObject.bars[i + 1], graphObject.bars[high]] = [graphObject.bars[high], graphObject.bars[i + 1]];
 
     return (i + 1);
-}
-
-function numSortedDivs (graphObject) {
-    let count = 0;
-    graphObject.bars.forEach(bar => {
-        if (bar.classList.contains("sorted")) {
-            count += 1;
-        }
-    })
-    return count;
-}
+};
