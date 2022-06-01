@@ -47,9 +47,11 @@
   transition: all 100ms ease-in-out;
 }
 
-.pause{
-  border-style: double;
-  border-width:0px 0px 0px 14px;
+.stop {
+  background-color: $page-color;
+  margin-right: 4px;
+
+
 }
 
 /* End Play/Pause button */

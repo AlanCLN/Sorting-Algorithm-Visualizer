@@ -1,18 +1,24 @@
 import sleep from "../utils/sleep";
 
-async function bubbleSort (graphObject, speed) {
+export default async function bubbleSort (graphObject, speed) {
     // let sorted = false;
     let unsortedDivs = graphObject.numDivs;
 
     // while (!sorted) {
     while (!graphObject.sorted) {
         // sorted = true;
+        if (graphObject.stop) {
+            graphObject.resetSort();
+            return;
+        }
         graphObject.sorted = true;
         for (let i = 0; (i < graphObject.numDivs - 1) && (i < unsortedDivs - 1); i++) { 
+
             let j = i + 1;
 
             const bar1 = graphObject.bars[i];
             const bar2 = graphObject.bars[j];
+
 
             graphObject.check(bar1, bar2);
             await sleep(speed);
@@ -22,10 +28,14 @@ async function bubbleSort (graphObject, speed) {
 
             if (bar1Value > bar2Value) {
                 graphObject.sorted = false;
-                swap(bar1, bar2);
+                if (graphObject.stop) {
+                    graphObject.resetSort();
+                    return;
+                }
+                graphObject.swap(bar1, bar2, speed);
                 [graphObject.bars[i], graphObject.bars[j]] = [graphObject.bars[j], graphObject.bars[i]]
-                await sleep(speed);
             }
+            await sleep(speed)
             graphObject.uncheck(bar1, bar2)
 
             if (j === unsortedDivs - 1) {
@@ -41,13 +51,14 @@ async function bubbleSort (graphObject, speed) {
     })
 }
 
+export function describeBubbleSort() {
+    const pTag = document.createElement("p");
+    pTag.classList.add("sort-description");
+    pTag.innerText = 
+    `Bubble Sort is a popular sorting algorithm that loops from the beginning of an array and tries to find
+    the largest element and "bubbles" it to the end of the array. Take a look at the graph and pay close attention
+    the "swapping" color. Notice how it loops from the beginning and carries the largest element to the end of
+    the array. Bubble Sort will do this until all the elements are sorted.`
 
-function swap(bar1, bar2) {  // takes in two bar divs and swaps them
-    const afterBar2 = bar2.nextElementSibling;
-    const parent = bar2.parentNode;
-
-    bar1.replaceWith(bar2);
-    parent.insertBefore(bar1, afterBar2);
+    return pTag;
 }
-
-export default bubbleSort;

@@ -1,32 +1,39 @@
 // import Bar from "./scripts/classes/bar"
 import Graph from "./scripts/classes/graph";
 import bubbleSort from "./scripts/algos/bubblesort";
+import { describeBubbleSort } from "./scripts/algos/bubblesort";
 import quickSort from "./scripts/algos/quicksort";
 import sleep from "./scripts/utils/sleep";
+import Control from "./scripts/classes/control";
 
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const graphObject = new Graph(50);
-    quickSort(graphObject, 0, graphObject.numDivs - 1);
-
     const playBtn = document.querySelector('.play');
+    const graphObject = new Graph(25);
+    const control = new Control(graphObject);
 
-    playBtn.addEventListener('click', (e)=>{
+    const descriptionContainer = document.getElementById("description-container");
 
-        if (e.target.classList.contains("pause")) {
-            e.target.classList.remove("pause");
-            // add pause alg here
-        } else {
-            e.target.classList.add("pause");
-            async function removePauseAfterSorted () {
-                await bubbleSort(graphObject, 20);
-                // await quickSort(graphObject, 0, graphObject.numDivs - 1);
-                e.target.classList.remove("pause");
-                // graphObject.generateGraph();
-            }
-            removePauseAfterSorted();
-        }
-    })
+    const bubbleSortP = describeBubbleSort();
 
+    descriptionContainer.append(bubbleSortP);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    playBtn.addEventListener('click', e => control.handlePlayBtn(e))
 })

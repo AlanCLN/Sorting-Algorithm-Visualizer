@@ -1,0 +1,14 @@
+#description-container {
+    height: auto;
+    width: $graph-legend-width;
+    margin-top: 30px;
+    border: 2px solid $page-color;
+    padding: 30px;
+    border: 3px solid $page-border-color;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    box-shadow: $box-shadow;
+    display: flex;
+    justify-content: center;
+}

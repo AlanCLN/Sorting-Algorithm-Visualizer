@@ -1,22 +1,46 @@
-function mergeSort (array) {
-    if (array.length < 2) return array;
+function mergeSort (arr, start, end) {
 
-    let mid = Math.floor(array.length / 2);
-    let left = mergeSort(array.slice(0, mid));
-    let right = mergeSort(array.slice(mid));
+    if (start < end) {
 
-    return merge(left, right);
+        let mid = Math.floor((start + end)/ 2);
+
+        mergeSort(arr, start, mid);
+        mergeSort(arr, mid + 1, end);
+
+        merge(arr, start, mid, end);
+    }
 }
 
-function merge(left, right) {
-    const resultArray = [];
+function merge (arr, start, mid, end) {
 
-    while (left.length && right.length) {
-        if (left[0] < right[0]) {
-            resultArray.push(left.shift())
+    let start2 = mid + 1;  // second pointer
+
+    if (arr[mid] <= arr[start2]) return;
+
+    while (start <= mid && start2 <= end) {
+        if (arr[start] <= arr[start2]) {
+            start++;
         } else {
-            resultArray.push(right.shift())
+
+            let value = arr[start2];
+            let index = start2;
+
+            while (index !== start) {
+                arr[index] = arr[index - 1];
+                index--;
+            }
+            arr[start] = value;
+
+            start++;
+            mid++;
+            start2++;
         }
     }
-    return resultArray.concat(left, right);
 }
+
+let arr = [17, 8, 12, 21, 9, 11, 15, 3];
+let arr2 = [12, 11, 13, 5, 6, 7];
+
+console.log(arr)
+mergeSort(arr, 0, arr.length - 1);
+console.log(arr);
