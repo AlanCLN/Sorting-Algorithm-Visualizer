@@ -53,6 +53,7 @@ export default async function bubbleSort (graphObject, speed) {
 
 export function describeBubbleSort() {
     const pTag = document.createElement("p");
+    pTag.id = "bubble-desc"
     pTag.classList.add("sort-description");
     pTag.innerText = 
     `Bubble Sort is a popular sorting algorithm that loops from the beginning of an array and tries to find

@@ -1,6 +1,6 @@
-import bubbleSort from "../algos/bubblesort";
-import mergeSort from "../algos/mergesort";
-import quickSort from "../algos/quicksort";
+import bubbleSort, { describeBubbleSort } from "../algos/bubblesort";
+import mergeSort, { describeMergeSort } from "../algos/mergesort";
+import quickSort, { describeQuickSort } from "../algos/quicksort";
 import Graph from "./graph";
 
 export default class Control {
@@ -39,12 +39,19 @@ export default class Control {
     handleAlgControl(e) {
         if (this.sorting === false) {
             if (e.currentTarget.id === "bubble") {
+                this.graphObject = new Graph(this.size);
                 this.selectAlgControl(e);
             } else if (e.currentTarget.id === "quick") {
+                this.graphObject = new Graph(this.size);
                 this.selectAlgControl(e);
             } else if (e.currentTarget.id === "merge") {
+                this.graphObject = new Graph(this.size);
                 this.selectAlgControl(e);
             }
+        } else {
+            this.graphObject.stop = true;
+            this.graphObject = new Graph(this.size);
+            this.selectAlgControl(e);
         }
     }
     resetAlgControl() {
@@ -60,6 +67,7 @@ export default class Control {
         this.resetAlgControl();
         e.currentTarget.classList.add("alg-selected");
         this.alg = e.currentTarget.id;
+        this.selectDescription(e);
     }
 
     handleSpeedControl(e) {
@@ -95,14 +103,17 @@ export default class Control {
                 this.selectSizeControl(e);
                 let new10 = new Graph(10);
                 this.graphObject = new10;
+                this.size = 10;
             } else if (e.currentTarget.id === '25') {
                 this.selectSizeControl(e);
                 let new25 = new Graph(25);
                 this.graphObject = new25;
+                this.size = 25;
             } else if (e.currentTarget.id === '50') {
                 this.selectSizeControl(e);
                 let new50 = new Graph(50);
                 this.graphObject = new50;
+                this.size = 50;
             }
         }
     }
@@ -117,6 +128,35 @@ export default class Control {
     selectSizeControl(e) {
         this.resetSizeControl();
         e.currentTarget.classList.add("size-selected");
+    }
+
+    handleNewArray() {
+        if (this.sorting === false) {
+            this.graphObject = new Graph(this.size);
+        } else {
+            this.graphObject.stop = true;
+            this.graphObject = new Graph(this.size);
+        }
+    }
+
+    selectDescription(e) {
+        this.clearDescription();
+        const descriptionContainer = document.querySelector("#description-container");
+        if (e.currentTarget.id === "bubble") {
+            descriptionContainer.append(describeBubbleSort());
+        } else if (e.currentTarget.id === "quick") {
+            descriptionContainer.append(describeQuickSort());
+        } else if (e.currentTarget.id === "merge") {
+            descriptionContainer.append(describeMergeSort());
+        }
+
+    }
+
+    clearDescription() {
+        const descriptionContainer = document.querySelector("#description-container");
+        while (descriptionContainer.firstChild) {
+            descriptionContainer.removeChild(descriptionContainer.firstChild)
+        }
     }
 
 }

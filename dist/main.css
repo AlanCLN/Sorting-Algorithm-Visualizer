@@ -187,23 +187,19 @@ div {
   font-size: 18px;
   border-radius: 3px;
   box-shadow: 5px 5px 9px 2px #767676;
+  justify-content: space-around;
 }
 
 /* Play/Pause button taken from codepen by Samiullah Khan */
-#play-restart-container {
-  margin-top: 10px;
-}
-
 .play-btn-container {
-  width: 38px;
-  height: 38px;
+  width: 50px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
   border: 2px solid #9A86A4;
   padding-left: 4px;
-  /* change container to circle */
   border-radius: 50%;
 }
 
@@ -213,11 +209,11 @@ div {
 }
 
 .play {
-  width: 18px;
-  height: 18px;
+  width: 26px;
+  height: 26px;
   box-sizing: border-box;
   border-style: solid;
-  border-width: 9px 0px 9px 18px;
+  border-width: 13px 0px 13px 26px;
   border-color: transparent transparent transparent #9A86A4;
   transition: all 100ms ease-in-out;
 }
@@ -228,12 +224,38 @@ div {
 }
 
 /* End Play/Pause button */
+#new-array-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#new-array-button {
+  height: 30px;
+  width: 130px;
+  font-size: 12px;
+  text-align: center;
+  border: 2px solid lightgray;
+  box-sizing: border-box;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 4px;
+  margin-bottom: 4px;
+}
+
+#new-array-button:hover {
+  cursor: pointer;
+  box-shadow: 5px 3px 6px #888888;
+  background-color: #dee1ef;
+}
+
 /* Size Control */
 #size-control {
   display: flex;
   width: auto;
   justify-content: center;
-  margin-top: 20px;
 }
 
 #size-control > span {
@@ -269,7 +291,6 @@ div.size-selected {
   display: flex;
   width: auto;
   justify-content: center;
-  margin-top: 5px;
   margin-right: 15px;
 }
 
@@ -303,7 +324,7 @@ div.speed-selected {
 /* Algorithm Control */
 #alg-control {
   width: 200px;
-  height: 200px;
+  height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -312,7 +333,7 @@ div.speed-selected {
 #alg-control div {
   text-align: center;
   border: 2px solid lightgray;
-  height: 60px;
+  height: 45px;
   box-sizing: border-box;
   border-radius: 3px;
   display: flex;
@@ -327,6 +348,7 @@ div.speed-selected {
 
 .alg-selected {
   background: #dee1ef;
+  font-weight: 700;
 }
 
 /* End Alg Control */
@@ -356,10 +378,10 @@ div.swapping {
   width: 1000px;
   margin-top: 30px;
   border: 2px solid #9A86A4;
-  padding: 30px;
+  padding: 20px;
   border: 3px solid #9A86A4;
   border-radius: 4px;
-  letter-spacing: 1px;
+  letter-spacing: 0.7px;
   line-height: 1.5;
   box-shadow: 5px 5px 9px 2px #767676;
   display: flex;

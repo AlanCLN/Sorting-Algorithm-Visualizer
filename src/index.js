@@ -10,11 +10,16 @@ import mergeSort from "./scripts/algos/mergesort";
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const playBtnContainer = document.querySelector('.play-btn-container');
     const graphObject = new Graph(10);
     const control = new Control(graphObject);
+
+    // default control values
+    control.size = 10;
     control.speed = 100;
     control.alg = "bubble";
+
+    const newArrayBtn = document.getElementById("new-array-button");
+    newArrayBtn.addEventListener('click', e => control.handleNewArray());
 
 
 
@@ -34,8 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     slowSpeedBtn.addEventListener('click', e => control.handleSpeedControl(e));
     midSpeedBtn.addEventListener('click', e => control.handleSpeedControl(e));
     fastSpeedBtn.addEventListener('click', e => control.handleSpeedControl(e));
-    // END SPEED CONTROLS
-
 
     // ALGORITHM CONTROLS
     const bubbleSortBtn = document.querySelector("#bubble");
@@ -44,10 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
     bubbleSortBtn.addEventListener('click', e => control.handleAlgControl(e));
     quickSortBtn.addEventListener('click', e => control.handleAlgControl(e));
     mergeSortBtn.addEventListener('click', e => control.handleAlgControl(e));
-    // END ALGORITHM CONTROLS
-
-
-
 
 
 
@@ -69,6 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
+    const playBtnContainer = document.querySelector('.play-btn-container');
     playBtnContainer.addEventListener('click', e => control.handlePlayBtn(e))
 })

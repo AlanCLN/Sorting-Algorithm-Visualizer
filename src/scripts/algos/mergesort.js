@@ -88,3 +88,17 @@ async function merge (graphObject, start, mid, end, speed) {
         }
     }
 }
+
+export function describeMergeSort() {
+    const pTag = document.createElement("p");
+    pTag.id = "merge-desc";
+    pTag.classList.add("sort-description");
+    pTag.innerText = 
+    `Merge Sort is also a divide and conquer algorithm. It recurisvely divides the array into halves until you end up
+    with a bunch of single element arrays. (i.e. an array of 10 elements will end up into 10 arrays of 1 element each)
+    We then call on a merge helper function that will help us recursively merge the sorted arrays. Set the graph to an
+    array of size 50 at a 3x speed and notice towards the end of the visualizer you will see what seems like two sorted
+    arrays getting merged.`
+
+    return pTag;
+}

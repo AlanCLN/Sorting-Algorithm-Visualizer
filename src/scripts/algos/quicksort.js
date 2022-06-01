@@ -72,4 +72,19 @@ async function partition (graphObject, low, high, speed) {
     [graphObject.bars[i + 1], graphObject.bars[high]] = [graphObject.bars[high], graphObject.bars[i + 1]];
 
     return (i + 1);
-};
+}
+
+export function describeQuickSort() {
+    const pTag = document.createElement("p");
+    pTag.id = "quick-desc";
+    pTag.classList.add("sort-description");
+    pTag.innerText = 
+    `Quick Sort is a highly efficient sorting algorithm that takes a divide and conquer approach. It takes a pivot 
+    element and partitions the array by putting all the smaller elements (compared to the pivot) on one side and all
+    the larger elements on the other. In our case, we are going left to right - smallest to largest. It will recursively
+    partition the left side until we hit a base case (an array of size 0 or 1 is by definition, sorted) before attempting
+    to sort the array. Notice in the graph that we will partition all the way down the left side and then start sorting
+    from the left before going to the right side.`
+
+    return pTag;
+}
