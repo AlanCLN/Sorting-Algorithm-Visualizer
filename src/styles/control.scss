@@ -77,7 +77,7 @@
 #size-control .size-button {
   width: 30px;
   height: 30px;
-  border: 1px solid lightgray;
+  border: 2px solid lightgray;
   padding: 4px;
   text-align: center;
   border-radius: 3px;
@@ -86,6 +86,7 @@
 
 .size-button:hover {
   cursor: pointer;
+  box-shadow: $selected-box-shadow;
 }
 
 div.size-selected {
@@ -116,7 +117,7 @@ div.size-selected {
 #speed-control .speed-button {
   width: 30px;
   height: 30px;
-  border: 1px solid $selected-color;
+  border: 2px solid $selected-color;
   padding: 4px;
   text-align: center;
   border-radius: 3px;
@@ -125,6 +126,7 @@ div.size-selected {
 
 .speed-button:hover {
   cursor: pointer;
+  box-shadow: $selected-box-shadow;
 }
 
 div.speed-selected {
@@ -149,7 +151,7 @@ div.speed-selected {
 
 #alg-control div {
   text-align: center;
-  border: 1px solid lightgray;
+  border: 2px solid lightgray;
   height: 60px;
   box-sizing: border-box;
   border-radius: 3px;

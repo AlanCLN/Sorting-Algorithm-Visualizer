@@ -8,10 +8,6 @@ export default class Graph {
         this.generateGraph();
         this.sorted = false;
         this.mergeSortCounter = 0;
-        
-        // speed will be passed in as either 1, 2, or 3. 100 is the ms delay set at
-        // each iteration of an algorithm. The less ms, the less delay, the faster the alg. 
-        this.speed = (100/speed);  
 
         // handlePlayBtn will set this to true in order to stop an alg.
         this.stop = false;
@@ -55,11 +51,13 @@ export default class Graph {
         bar2.classList.remove("checking");
     }
 
-    resetSort() {
+    async resetSort() {
         this.bars.forEach(bar => {
             bar.classList.remove("checking");
             bar.classList.remove("sorted");
         })
+        this.mergeSortCounter = 0;  // used only for mergeSort
+        await sleep(100)
         this.stop = false;
     }
 

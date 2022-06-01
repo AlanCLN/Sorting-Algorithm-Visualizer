@@ -11,8 +11,49 @@ import mergeSort from "./scripts/algos/mergesort";
 document.addEventListener('DOMContentLoaded', () => {
 
     const playBtnContainer = document.querySelector('.play-btn-container');
-    const graphObject = new Graph(25);
+    const graphObject = new Graph(10);
     const control = new Control(graphObject);
+    control.speed = 100;
+    control.alg = "bubble";
+
+
+
+
+    // SIZE CONTROLS
+    const smallSizeBtn = document.getElementById("10");
+    const midSizeBtn = document.getElementById("25");
+    const largeSizeBtn = document.getElementById("50");
+    smallSizeBtn.addEventListener('click', e => control.handleSizeControl(e));
+    midSizeBtn.addEventListener('click', e => control.handleSizeControl(e));
+    largeSizeBtn.addEventListener('click', e => control.handleSizeControl(e));
+
+    // SPEED CONTROLS
+    const slowSpeedBtn = document.getElementById("1");
+    const midSpeedBtn = document.getElementById("2");
+    const fastSpeedBtn = document.getElementById("3");
+    slowSpeedBtn.addEventListener('click', e => control.handleSpeedControl(e));
+    midSpeedBtn.addEventListener('click', e => control.handleSpeedControl(e));
+    fastSpeedBtn.addEventListener('click', e => control.handleSpeedControl(e));
+    // END SPEED CONTROLS
+
+
+    // ALGORITHM CONTROLS
+    const bubbleSortBtn = document.querySelector("#bubble");
+    const quickSortBtn = document.querySelector("#quick");
+    const mergeSortBtn = document.querySelector("#merge");
+    bubbleSortBtn.addEventListener('click', e => control.handleAlgControl(e));
+    quickSortBtn.addEventListener('click', e => control.handleAlgControl(e));
+    mergeSortBtn.addEventListener('click', e => control.handleAlgControl(e));
+    // END ALGORITHM CONTROLS
+
+
+
+
+
+
+
+
+
 
     const descriptionContainer = document.getElementById("description-container");
 
@@ -20,7 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     descriptionContainer.append(bubbleSortP);
 
-    mergeSort(graphObject, 0, graphObject.numDivs - 1);
+
+
+
 
 
 
