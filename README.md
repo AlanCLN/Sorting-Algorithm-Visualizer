@@ -11,7 +11,7 @@ In Sorting Algorithm Visualizer users will be able to:
 - Understand the different sorting algorithms when reading each description
 - Adjust the speed at which the graph is being sorted
 - Select the amount of datapoints you would like to sort
-- A start/stop button to visualize each iteration
+- A start/stop button for when you want to make changes
 
 ## Technologies
 

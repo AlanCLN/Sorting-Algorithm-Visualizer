@@ -17,7 +17,7 @@ export default class Control {
         } else if (this.graphObject.sorted === false) {
             e.target.classList.add("stop");
             // await bubbleSort(this.graphObject, 50)
-            await quickSort(this.graphObject, 0, this.graphObject.numDivs - 1);
+            await quickSort(this.graphObject, 0, this.graphObject.numDivs - 1, 33);
             e.target.classList.remove("stop");
         }
     }
@@ -29,7 +29,7 @@ export default class Control {
     }
 
     resetAlgControl() {
-        
+
     }
 }
 

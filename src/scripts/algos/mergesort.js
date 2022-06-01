@@ -1,35 +1,38 @@
-function mergeSort (arr, start, end) {
+export default async function mergeSort(graphObject, start, end) {
 
     if (start < end) {
 
         let mid = Math.floor((start + end)/ 2);
 
-        mergeSort(arr, start, mid);
-        mergeSort(arr, mid + 1, end);
+        mergeSort(graphObject, start, mid);
+        mergeSort(graphObject, mid + 1, end);
 
-        merge(arr, start, mid, end);
+        merge(graphObject, start, mid, end);
     }
 }
 
-function merge (arr, start, mid, end) {
+async function merge (graphObject, start, mid, end) {
 
     let start2 = mid + 1;  // second pointer
+    console.log(start2);
+    debugger
 
-    if (arr[mid] <= arr[start2]) return;
+    if (graphObject.barObjects[mid].value <= graphObject.barObjects[start2].value) {
+        return;
+    }
 
     while (start <= mid && start2 <= end) {
-        if (arr[start] <= arr[start2]) {
+        if (graphObject.barObjects[start].value <= graphObject.barObjects[start2].value) {
             start++;
         } else {
-
-            let value = arr[start2];
             let index = start2;
-
             while (index !== start) {
-                arr[index] = arr[index - 1];
+                // debugger
+                graphObject.swap(graphObject.bars[index - 1], graphObject.bars[index])
+
+                [graphObject.barObjects[index], graphObject.barObjects[index - 1]] = [graphObject.barObjects[index - 1], graphObject.barObjects[index]];
                 index--;
             }
-            arr[start] = value;
 
             start++;
             mid++;
@@ -37,10 +40,3 @@ function merge (arr, start, mid, end) {
         }
     }
 }
-
-let arr = [17, 8, 12, 21, 9, 11, 15, 3];
-let arr2 = [12, 11, 13, 5, 6, 7];
-
-console.log(arr)
-mergeSort(arr, 0, arr.length - 1);
-console.log(arr);
