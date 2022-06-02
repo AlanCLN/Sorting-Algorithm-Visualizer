@@ -13,16 +13,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const graphObject = new Graph(10);
     const control = new Control(graphObject);
 
-    // default control values
+    // DEFAULT CONTROL VALUES
     control.size = 10;
     control.speed = 100;
     control.alg = "bubble";
-
+    const descriptionContainer = document.getElementById("description-container");
+    const bubbleSortP = describeBubbleSort();
+    descriptionContainer.append(bubbleSortP);
+    
+    // PLAY BUTTON
+    const playBtnContainer = document.querySelector('.play-btn-container');
+    playBtnContainer.addEventListener('click', e => control.handlePlayBtn(e))
+    
+    // GENERATE NEW ARRAY BUTTON
     const newArrayBtn = document.getElementById("new-array-button");
     newArrayBtn.addEventListener('click', e => control.handleNewArray());
-
-
-
 
     // SIZE CONTROLS
     const smallSizeBtn = document.getElementById("10");
@@ -47,15 +52,4 @@ document.addEventListener('DOMContentLoaded', () => {
     bubbleSortBtn.addEventListener('click', e => control.handleAlgControl(e));
     quickSortBtn.addEventListener('click', e => control.handleAlgControl(e));
     mergeSortBtn.addEventListener('click', e => control.handleAlgControl(e));
-
-
-
-    const descriptionContainer = document.getElementById("description-container");
-
-    const bubbleSortP = describeBubbleSort();
-
-    descriptionContainer.append(bubbleSortP);
-
-    const playBtnContainer = document.querySelector('.play-btn-container');
-    playBtnContainer.addEventListener('click', e => control.handlePlayBtn(e))
 })
