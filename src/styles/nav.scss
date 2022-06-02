@@ -32,15 +32,36 @@
     color: black;  /* get rid of this when favicons are placed */
 }
 
-.info-icon {
+.info-icon img{
+    position: relative;
     height: 41px;
     width: auto;
     margin-right: 6px;
     margin-top: 2px;
-
 }
-.info-icon:hover {
+
+.info-content {
+    position: absolute;
+    top: 80px;
+    right: 40px;
+    display: none;
+    height: 360px;
+    width: 640px;
+    z-index: 1;
+    border: 3px solid $page-color;
+    box-shadow: $box-shadow;
+}
+.info-content img {
+    height: 100%;
+    width: 100%;
+}
+
+.info-icon img:hover {
     opacity: 50%;
+}
+
+.info-icon:hover .info-content {
+    display: block;
 }
 
 .github-favicon {
