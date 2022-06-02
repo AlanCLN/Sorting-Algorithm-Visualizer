@@ -50,23 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
-
-
     const descriptionContainer = document.getElementById("description-container");
 
     const bubbleSortP = describeBubbleSort();
 
     descriptionContainer.append(bubbleSortP);
-
-
-
-
-
-
-
-
 
     const playBtnContainer = document.querySelector('.play-btn-container');
     playBtnContainer.addEventListener('click', e => control.handlePlayBtn(e))
