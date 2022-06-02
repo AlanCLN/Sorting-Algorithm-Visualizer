@@ -32,6 +32,17 @@
     color: black;  /* get rid of this when favicons are placed */
 }
 
+.info-icon {
+    height: 41px;
+    width: auto;
+    margin-right: 6px;
+    margin-top: 2px;
+
+}
+.info-icon:hover {
+    opacity: 50%;
+}
+
 .github-favicon {
     height: 37px;
     width: auto;

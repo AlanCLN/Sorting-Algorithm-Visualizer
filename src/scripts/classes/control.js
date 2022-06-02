@@ -56,7 +56,7 @@ export default class Control {
     }
     resetAlgControl() {
         const algControlParent = document.getElementById("alg-control");
-        // this returns an HTML collect. Must use for loop
+        // this returns an HTML collect. Must use a for loop instead of an each loop
         const algControlChildren = algControlParent.children;
         
         for (let i = 0; i < algControlChildren.length; i++) {

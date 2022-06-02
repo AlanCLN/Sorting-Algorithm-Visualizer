@@ -13,7 +13,6 @@
 }
 
 /* Play/Pause button taken from codepen by Samiullah Khan */
-
 .play-btn-container {
     width: 50px;
     height: 50px;
@@ -23,14 +22,12 @@
     margin: 0 auto;
     border: 2px solid $page-border-color;
     padding-left: 4px;
-    border-radius: 50%; // changes container to a circle
+    border-radius: 50%;
 }
-
 .play-btn-container:hover {
     cursor: pointer;
     background-color: $selected-color;
 }
-
 .play {
   width: 26px;
   height: 26px;
@@ -45,7 +42,6 @@
   background-color: $page-color;
   margin-right: 4px;
 }
-
 /* End Play/Pause button */
 
 #new-array-button-container {
@@ -75,23 +71,18 @@
   background-color: $selected-color;
 }
 
-// ----------------------------------
-
 /* Size Control */
-
 #size-control {
   display: flex;
   width: auto;
   justify-content: center;
 }
-
 #size-control > span {
   width: 30px;
   height: 30px;
   margin-right: 15px;
   padding: 4px;
 }
-
 #size-control .size-button {
   width: 30px;
   height: 30px;
@@ -101,36 +92,28 @@
   border-radius: 3px;
   margin-right: 2px;
 }
-
 .size-button:hover {
   cursor: pointer;
   box-shadow: $selected-box-shadow;
 }
-
 div.size-selected {
   background-color: $selected-color;
   font-weight: 550;
 }
-
 /* End Size Control */
 
-// ------------------------------------
-
 /* Speed Control */
-
 #speed-control {
   display: flex;
   width: auto;
   justify-content: center;
   margin-right: 15px;
 }
-
 #speed-control > span {
   height: 30px;
   margin-right: 7px;
   padding: 4px;
 }
-
 #speed-control .speed-button {
   width: 30px;
   height: 30px;
@@ -140,24 +123,17 @@ div.size-selected {
   border-radius: 3px;
   margin-right: 2px;
 }
-
 .speed-button:hover {
   cursor: pointer;
   box-shadow: $selected-box-shadow;
 }
-
 div.speed-selected {
   background-color: $selected-color;
   font-weight: 550;
 }
-
-
 /* End Speed Control */
 
-// -----------------------------------
-
 /* Algorithm Control */
-
 #alg-control {
   width: 200px;
   height: 150px;
@@ -165,7 +141,6 @@ div.speed-selected {
   flex-direction: column;
   justify-content: space-around;
 }
-
 #alg-control div {
   text-align: center;
   border: 2px solid lightgray;
@@ -176,15 +151,12 @@ div.speed-selected {
   align-items: center;
   justify-content: center
 }
-
 .alg-button:hover {
   cursor: pointer;
   box-shadow: $selected-box-shadow;
 }
-
 .alg-selected {
   background: $selected-color;
   font-weight: 700;
 }
-
 /* End Alg Control */

@@ -1,24 +1,19 @@
 import sleep from "../utils/sleep";
 
 export default async function bubbleSort (graphObject, speed) {
-    // let sorted = false;
     let unsortedDivs = graphObject.numDivs;
 
-    // while (!sorted) {
     while (!graphObject.sorted) {
-        // sorted = true;
         if (graphObject.stop) {
             graphObject.resetSort();
             return;
         }
         graphObject.sorted = true;
         for (let i = 0; (i < graphObject.numDivs - 1) && (i < unsortedDivs - 1); i++) { 
-
             let j = i + 1;
 
             const bar1 = graphObject.bars[i];
             const bar2 = graphObject.bars[j];
-
 
             graphObject.check(bar1, bar2);
             await sleep(speed);
