@@ -1,4 +1,6 @@
-# ![Sorting Algorithm Visualizer](https://alancln.github.io/Sorting-Algorithm-Visualizer/)
+# Sorting Algorithm Visualizer
+
+![Try it!!](https://alancln.github.io/Sorting-Algorithm-Visualizer/)
 
 ## Background
 
