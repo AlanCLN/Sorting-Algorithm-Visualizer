@@ -26,7 +26,6 @@ export default async function mergeSort(graphObject, start, end, speed) {
             return -1;
         }
 
-
         graphObject.mergeSortCounter += 1;
 
         // if the counter reaches number of bars - 1, the mergeSort is sorted.

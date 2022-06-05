@@ -9,7 +9,7 @@ export default class Graph {
         this.sorted = false;
         this.mergeSortCounter = 0;
 
-        // handlePlayBtn will set this to true in order to stop an alg.
+        // handlePlayBtn in control class will set this to true in order to stop an alg.
         this.stop = false;
     }
 
@@ -67,7 +67,6 @@ export default class Graph {
         bar1.classList.add("swapping");
         bar2.classList.add("swapping");
 
-
         const afterBar2 = bar2.nextElementSibling;
         const parent = bar2.parentNode;
     
@@ -89,7 +88,4 @@ export default class Graph {
         })
         return count;
     }
-
-
-
 }
