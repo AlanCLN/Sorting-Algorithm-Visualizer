@@ -19,7 +19,6 @@ export default class Graph {
             const value = (Math.floor(Math.random() * 100)) + 10;
 
             const barObject = new Bar(value, this.graph);
-            this.barObjects.push(barObject);
             if (this.numDivs <= 25) {
                 barObject.div.innerText = value;
             }
@@ -38,7 +37,6 @@ export default class Graph {
         this.sorted = false;
         this.removeAllChildNodes();
         this.bars = [];
-        this.barObjects = [];
     }
 
     check(bar1, bar2) {
