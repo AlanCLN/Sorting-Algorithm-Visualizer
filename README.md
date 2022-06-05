@@ -1,4 +1,4 @@
-# Sorting Algorithm Visualizer
+# ![Sorting Algorithm Visualizer](https://alancln.github.io/Sorting-Algorithm-Visualizer/)
 
 ## Background
 
@@ -15,21 +15,15 @@ In Sorting Algorithm Visualizer users will be able to:
 - Select the amount of datapoints you would like to sort
 - A start/stop button for when you want to make changes
 
+![](./assets/gif-demo/buttons-demo.gif)
+
+Hover over the info icon for guidelines on how to start using it
+
+![](./assets/gif-demo/info-icon.gif)
+
 ## Technologies
 
 - HTML
 - SCSS
 - Javascript
 - Webpack
-
-## Implementation Timeline
-
-1. Friday & Weekend: Finish creating classes
-2. Monday: Implement the different algorithms
-3. Tuesday: Implement the controls
-4. Wednesday: Make UI more appealing
-5. Thursday morning: Testing for bugs
-
-## UI
-
-![](./assets/sorting_alg_UI.png)
