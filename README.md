@@ -32,7 +32,7 @@ Hover over the info icon for guidelines on how to start using it
 
 ## Code Snippets
 
-Below is a code snippet of how the graph is made with all the bars. The reset() function removes all child nodes on the graph so we can generate a new set of bars. The value of each bar is random and passed in as an argument for each Bar instance. The property 'this.bars' was initialized as an empty array. We then push each bar's div into 'this.bars' so we can manipulate it later with our sorting algorithms.
+Below is a code snippet of how the graph is made with all the bars. The reset() function removes all child nodes on the graph so we can generate a new set of bars. The value of each bar is random and passed in as an argument for each Bar instance. The property 'this.bars' was initialized as an empty array. We then push each bar's div into 'this.bars' so we can manipulate this array later with our sorting algorithms.
 
 ```javascript
 generateGraph() {
