@@ -50,7 +50,7 @@ generateGraph() {
 }
 ```
 
-Below is a swap function that belongs to the graph class. In this function, we are passing in NOT bar objects, but the divs that the bar object represents. Doing so allows us to use HTML DOM methods (replaceWith and insertBefore) that swaps the two nodes for us. 
+Below is a swap function that belongs to the graph class. In this function, we are passing in NOT bar objects, but the divs that the bar object represents. Doing so allows us to use HTML DOM methods (replaceWith and insertBefore) that swap the two nodes for us. 
 
 ```javascript
 async swap(bar1, bar2, speed) {
