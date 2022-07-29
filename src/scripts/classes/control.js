@@ -21,16 +21,22 @@ export default class Control {
             playBtn.classList.add("stop");
             if (this.alg === "bubble") {
                 this.sorting = true;
-                await bubbleSort(this.graphObject, this.speed)
+                this.makeSpeedSizeUnClickable();
+                await bubbleSort(this.graphObject, this.speed);
                 this.sorting = false;
+                this.makeSpeedSizeClickable();
             } else if (this.alg === "quick") {
                 this.sorting = true;
+                this.makeSpeedSizeUnClickable();
                 await quickSort(this.graphObject, 0, this.graphObject.numDivs - 1, this.speed);
                 this.sorting = false;
+                this.makeSpeedSizeClickable();
             } else if (this.alg === "merge") {
                 this.sorting = true;
+                this.makeSpeedSizeUnClickable();
                 await mergeSort(this.graphObject, 0, this.graphObject.numDivs - 1, this.speed);
                 this.sorting = false;
+                this.makeSpeedSizeClickable();
             }
             playBtn.classList.remove("stop");
         }
@@ -156,6 +162,20 @@ export default class Control {
         const descriptionContainer = document.querySelector("#description-container");
         while (descriptionContainer.firstChild) {
             descriptionContainer.removeChild(descriptionContainer.firstChild)
+        }
+    }
+
+    makeSpeedSizeUnClickable() {
+        let speedSizeButtons = document.getElementsByClassName('speed-size-buttons')
+        for (let i = 0; i < speedSizeButtons.length; i++) {
+            speedSizeButtons[i].classList.remove('speed-size-clickable')
+        }
+    }
+
+    makeSpeedSizeClickable() {
+        let speedSizeButtons = document.getElementsByClassName('speed-size-buttons')
+        for (let i = 0; i < speedSizeButtons.length; i++) {
+            speedSizeButtons[i].classList.add('speed-size-clickable')
         }
     }
 

@@ -92,7 +92,7 @@
   border-radius: 3px;
   margin-right: 2px;
 }
-.size-button:hover {
+.speed-size-clickable:hover {
   cursor: pointer;
   box-shadow: $selected-box-shadow;
 }
@@ -123,7 +123,7 @@ div.size-selected {
   border-radius: 3px;
   margin-right: 2px;
 }
-.speed-button:hover {
+.speed-size-clickable:hover {
   cursor: pointer;
   box-shadow: $selected-box-shadow;
 }

@@ -26,8 +26,8 @@
 
 #socials li {
     display: inline-block;
-    font-size: 20px;  /* get rid of this when favicons are placed */
-    color: black;  /* get rid of this when favicons are placed */
+    font-size: 20px;
+    color: black;
 }
 
 .info-icon img{
@@ -62,15 +62,20 @@
     display: block;
 }
 
-.github-favicon {
+.github-icon {
     height: 37px;
     width: auto;
     margin-top: 4px;
 }
 
-.linkedin-favicon {
+.linkedin-icon {
     height: 45px;
     width: auto;
     margin-bottom: 4px;
     margin-left: 4px;
+}
+
+.portfolio-icon {
+    height: 46px;
+    width: auto;
 }

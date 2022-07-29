@@ -95,9 +95,7 @@ div {
 #socials li {
   display: inline-block;
   font-size: 20px;
-  /* get rid of this when favicons are placed */
   color: black;
-  /* get rid of this when favicons are placed */
 }
 
 .info-icon img {
@@ -133,17 +131,22 @@ div {
   display: block;
 }
 
-.github-favicon {
+.github-icon {
   height: 37px;
   width: auto;
   margin-top: 4px;
 }
 
-.linkedin-favicon {
+.linkedin-icon {
   height: 45px;
   width: auto;
   margin-bottom: 4px;
   margin-left: 4px;
+}
+
+.portfolio-icon {
+  height: 46px;
+  width: auto;
 }
 
 #main-body {
@@ -308,7 +311,7 @@ div {
   margin-right: 2px;
 }
 
-.size-button:hover {
+.speed-size-clickable:hover {
   cursor: pointer;
   box-shadow: 5px 3px 6px #888888;
 }
@@ -343,7 +346,7 @@ div.size-selected {
   margin-right: 2px;
 }
 
-.speed-button:hover {
+.speed-size-clickable:hover {
   cursor: pointer;
   box-shadow: 5px 3px 6px #888888;
 }
